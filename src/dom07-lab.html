@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 07: lab</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="./material-symbols.css" />
+    <link rel="stylesheet" href="./dom.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./js/dom07-lab.js"></script>
+  </head>
+  <body>
+    <main class="app-cmp-main">
+      <header>
+        <button
+          type="button"
+          class="app-cl-cmd app-cmd-add-section app-cl-primary"
+        >
+          <i class="material-symbols-outlined">post_add</i>
+          Add
+        </button>
+      </header>
+
+      <div class="app-cmp-sections-list">
+        <template class="app-tmpl-section">
+          <section class="app-cmp-section">
+            <header>
+              <h1>Section</h1>
+              <button class="app-cl-cmd app-cmd-add-input app-cl-primary">
+                <i class="material-symbols-outlined">add</i>
+                input
+              </button>
+
+              <button
+                type="button"
+                class="app-cmd-remove-section app-cl-cmd app-cl-warn"
+                disabled
+              >
+                <i class="material-symbols-outlined">delete_forever</i>
+              </button>
+            </header>
+
+            <div class="app-cmp-inputs-list">
+              <template class="app-tmpl-input">
+                <div class="app-cmp-input">
+                  <label>
+                    <b class="app-elem-title"
+                      >Number
+                      <span class="app-elem-title-no app-cl-number"></span
+                    ></b>
+                    <input
+                      type="number"
+                      value="0"
+                      class="app-elem-input app-cl-number"
+                    />
+                  </label>
+                  <button
+                    type="button"
+                    class="app-cmd-remove-input app-cl-cmd app-cl-warn"
+                  >
+                    <i class="material-symbols-outlined">delete_forever</i>
+                  </button>
+                </div>
+              </template>
+            </div>
+
+            <div class="app-cmp-input">
+              <label>
+                <b class="app-elem-title">Result</b>
+                <output class="app-elem-result app-cl-number">0</output>
+              </label>
+              <button type="button" hidden class="app-cl-cmd app-cl-warn">
+                <i class="material-symbols-outlined">delete_forever</i>
+              </button>
+            </div>
+          </section>
+        </template>
+      </div>
+    </main>
+  </body>
+</html>

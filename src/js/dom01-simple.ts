@@ -1,24 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const inputComponents = Array.from(
-    document.querySelectorAll<HTMLInputElement>(
+  const inputComponents = [
+    ...document.querySelectorAll<HTMLInputElement>(
       '.app-cmp-input input[type="number"].app-elem-input',
     ),
-  );
+  ];
 
   inputComponents.forEach((element) => {
     element.addEventListener('change', () => {
       const result = inputComponents.reduce(
-        (accumulator, inputElement) =>
-          accumulator + (inputElement.valueAsNumber || 0),
+        (total, element) => total + (element.valueAsNumber || 0), // Handle NaN values as 0
         0,
       );
 
-      const outputElement = document.querySelector<HTMLOutputElement>(
+      const output = document.querySelector<HTMLOutputElement>(
         'output.app-elem-result',
       );
 
-      if (outputElement) {
-        outputElement.value = result.toLocaleString();
+      if (output !== null) {
+        output.value = `${result.toLocaleString()}`;
+      } else {
+        console.error('output.app-elem-result not found');
       }
     });
   });

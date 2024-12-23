@@ -4,29 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM 01: Simple</title>
-
-    <script type="application/javascript" src="./js/dom01-simple.js"></script>
+    <link rel="stylesheet" href="./css/dom.css" />
+    <link rel="stylesheet" href="./css/material-symbols.css" />
+    <script defer src="./js/dom01-simple.js"></script>
   </head>
   <body>
-    <div class="app-cmp-input">
-      <label>
-        <b>Number 1</b>
-        <input type="number" value="0" class="app-elem-input" />
-      </label>
-    </div>
+    <main class="app-cmp-main">
+      <!-- Input Section -->
+      <section class="app-cmp-inputs-list">
+        <div class="app-cmp-input">
+          <label for="number1">
+            <b>Number 1</b>
+          </label>
+          <input id="number1" type="number" value="0" class="app-elem-input" />
+        </div>
 
-    <div class="app-cmp-input">
-      <label>
-        <b>Number 2</b>
-        <input type="number" value="0" class="app-elem-input" />
-      </label>
-    </div>
+        <div class="app-cmp-input">
+          <label for="number2">
+            <b>Number 2</b>
+          </label>
+          <input id="number2" type="number" value="0" class="app-elem-input" />
+        </div>
+      </section>
 
-    <div>
-      <label>
-        <b>Result</b>
-        <output class="app-elem-result">0</output>
-      </label>
-    </div>
+      <!-- Result Section -->
+      <section class="app-cmp-result">
+        <label for="result">
+          <b>Result</b>
+        </label>
+        <output id="result" class="app-elem-result">0</output>
+      </section>
+    </main>
   </body>
 </html>
